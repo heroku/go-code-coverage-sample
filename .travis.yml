@@ -32,7 +32,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - go test -race -coverprofile c.out ./...
+  - go test -race -coverprofile c.out  -covermode atomic ./...
 after_script:
   - sed -i'' -e 's/go-code-coverage-sample\///g' c.out
   - ./cc-test-reporter after-build --debug --exit-code $TRAVIS_TEST_RESULT
