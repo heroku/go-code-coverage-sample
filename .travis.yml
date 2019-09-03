@@ -4,9 +4,21 @@ env:
   - GO111MODULE=on
 go:
 - '1.12'
-install:
-  - go get golang.org/x/tools/cmd/cover
-  - go get github.com/mattn/goveralls
+
+# COVERALLS
+#install:
+#  - go get golang.org/x/tools/cmd/cover
+#  - go get github.com/mattn/goveralls
+#script:
+#  - go test -v -covermode=count -coverprofile=coverage.out ./...
+#  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+
+# CODECOV
+before_install:
+  - go get -t -v ./...
+
 script:
-  - go test -v -covermode=count -coverprofile=coverage.out ./...
-  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - go test -race -coverprofile=coverage.txt -covermode=atomic
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
