@@ -36,4 +36,4 @@ script:
   - go test -race -coverprofile c.out ./...
 after_script:
   - sed -i'' -e 's/go-code-coverage-sample\///g' c.out
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter after-build --debug --exit-code $TRAVIS_TEST_RESULT
