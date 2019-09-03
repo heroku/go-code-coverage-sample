@@ -35,4 +35,4 @@ before_script:
 script:
   - go test -race -coverprofile=coverage.txt -covermode=atomic ./...
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t gocov coverage.txt
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t cover coverage.txt
