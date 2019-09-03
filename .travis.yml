@@ -2,8 +2,6 @@ language: go
 env:
   matrix:
   - GO111MODULE=on
-  global:
-    secure: axrg2XKqoG54+x+dSC+ocJ1fC3h5qiwLorZrbAxLo2fVurscV8lYkIUSFqJpK67qBiZJyKi2Myyso5fcQBTTKNqQSUhWSVUftqbevhQfYauOlH8P2955YWFSxaiqWoq/rVHYiAPAO+CtfjF39YbaskrevPeokkCdO89KvKCTkq5c2n4V3nQxIvYQimQf3SzwcTccXtelJXkfb6AilQF8woY6YwnJ1DvCYuGBUkELg1lomuynFpVftIdpU71SA/JIs7jXPuXFVpIfs2RnyxLV4dQP4NfeMDbYjkSW/v6QHjainyujgBft9ynNaBtwqVOcreZcHxvtWvlt+aaeyf9LM4667D+7+JTBHJmIZORAWg/u+U1aWVME96BFcLGvJ3Nlg5VAnHp55/pztlNYr427L6zZy4K2oTBU4f4XFkUNCXHzzIvk3eU7jaDrWGO1F/2CyI2K/9hpVtlwrwRSGGx5BRWUOFbjQ/PAR7+QCpL8nJ7sNxMRCe0qv7dSPGG3V9eUQzIXIPOFTIoGJZruflV3lyslD/4NOehnhkqd/7yd7iHowHky/tfnOZXqn/rwl/PNxZkjBDA1HnVGyFoG+WSlrO4gliJFwZwJvwxFyjMKydaS7VviH3LwDpKuZg2Jw1hN9i0KIJd/jOaSRH2G8yKLpC7rOFGsWvV17/uK5g9lfd8=
 go:
 - '1.12'
 install:
