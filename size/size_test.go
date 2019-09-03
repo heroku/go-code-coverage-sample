@@ -9,8 +9,6 @@ type Test struct {
 
 var tests = []Test{
 	{-1, "negative"},
-	{0, "zero"},
-	{5, "small"},
 	{100, "huge"},
 }
 
