@@ -2,7 +2,6 @@ language: go
 env:
   global:
   - GO111MODULE=on
-  - CC_TEST_REPORTER_ID=ABC123
 go:
 - '1.12'
 
