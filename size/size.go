@@ -47,6 +47,8 @@ func Size(a int) string {
 		return "big"
 	case a < 1000:
 		return "huge"
+	case a < 10000:
+		return "really huge"
 	}
 	return "enormous"
 }
