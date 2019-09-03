@@ -2,6 +2,8 @@ package size
 
 func Size(a int) string {
 	switch {
+	case a < 100:
+		return "very negative"
 	case a < 0:
 		return "negative"
 	case a == 0:
