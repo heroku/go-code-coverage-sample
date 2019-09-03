@@ -24,15 +24,20 @@ go:
 #  - bash <(curl -s https://codecov.io/bash)
 
 # CODE CLIMATE
-#env:
-#  global:
-#    - CC_TEST_REPORTER_ID=ABC123
+#before_script:
+#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+#  - chmod +x ./cc-test-reporter
+#  - ./cc-test-reporter before-build
+#script:
+#  - go test -race -coverprofile c.out  -covermode atomic ./...
+#after_script:
+#  - sed -i'' -e 's/go-code-coverage-sample\///g' c.out
+#  - ./cc-test-reporter after-build --debug --exit-code $TRAVIS_TEST_RESULT
+
+# CODACY
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+  - go get github.com/schrej/godacov
 script:
   - go test -race -coverprofile c.out  -covermode atomic ./...
 after_script:
-  - sed -i'' -e 's/go-code-coverage-sample\///g' c.out
-  - ./cc-test-reporter after-build --debug --exit-code $TRAVIS_TEST_RESULT
+  - godacov -t $CODACY_TOKEN -r ./c.out -c $TRAVIS_COMMIT
