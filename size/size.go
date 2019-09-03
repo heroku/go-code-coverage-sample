@@ -1,6 +1,23 @@
 package size
 
+import "fmt"
+
 func Size(a int) string {
+	// complexity
+	if true {
+		if true {
+			if true {
+				if true {
+					if true {
+						if true {
+							fmt.Println()
+						}
+					}
+				}
+			}
+		}
+	}
+
 	switch {
 	case a < -100:
 		return "very negative"
