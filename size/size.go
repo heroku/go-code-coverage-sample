@@ -4,7 +4,7 @@ import "fmt"
 
 func Size(a int) string {
 	// complexity
-	if true {
+	if false {
 		if true {
 			if true {
 				if true {
@@ -19,7 +19,7 @@ func Size(a int) string {
 	}
 
 	// duplicated complexity
-	if true {
+	if false {
 		if true {
 			if true {
 				if true {
