@@ -2,6 +2,7 @@ package size
 
 import "fmt"
 
+// Size is a function
 func Size(a int) string {
 	// complexity
 	if true {
