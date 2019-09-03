@@ -1,3 +1,3 @@
-module go-code-coverage-sample.ryanbrainard.com
+module go-code-coverage-sample
 
-go 1.13
+go 1.12

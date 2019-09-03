@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"go-code-coverage-sample.ryanbrainard.com/calc"
+	"go-code-coverage-sample/calc"
 )
 
 var greet bool
