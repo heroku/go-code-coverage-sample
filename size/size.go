@@ -18,6 +18,21 @@ func Size(a int) string {
 		}
 	}
 
+	// duplicated complexity
+	if true {
+		if true {
+			if true {
+				if true {
+					if true {
+						if true {
+							fmt.Println()
+						}
+					}
+				}
+			}
+		}
+	}
+
 	switch {
 	case a < -100:
 		return "very negative"
